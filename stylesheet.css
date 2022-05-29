@@ -1,0 +1,195 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+    list-style: none; /* 追加 */
+}
+
+html {
+    font-size: 62.5%; /* 追加 */
+    box-sizing: border-box; /* 追加 */
+}
+
+body {
+    color: #555555; /* 追加 */
+    font-size: 1.6em; /* 追加 */
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* ここから header */
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed; /* ヘッダー固定 */
+    top: 0;
+    left: 0;
+    z-index: 100; /* レイヤー順 */
+}
+
+.gnav {
+    display: flex;
+}
+
+.gnav li {
+    text-align: center;
+    flex: 1;
+}
+
+.gnav a {
+    display: block; /* 全幅クリック可能に */
+    padding: 17px 0;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+/* ここから.top */
+.top {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(240, 240, 240);
+    position: relative; /* 下の h1 の基準にする */
+}
+
+.top h1 {
+    text-align: center;
+    position: absolute; /* top を基準に位置指定 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* ここから .main-wrapper */
+/* ここから .profile */
+.main-wrapper {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    
+    height: 1000px;
+}
+
+section {
+    padding: 0 10px; /* 左右の余白 */
+
+    background-color: rgb(172, 114, 114);
+}
+
+.profile h2 {
+    padding: 30px 0;
+}
+
+.profile-box {
+    display: flex;
+}
+
+.profile-left {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.profile-left img {
+    width: 100%; /* flex:1 をした親要素の幅に合わせる */
+}
+
+.profile-right {
+    flex: 1;
+}

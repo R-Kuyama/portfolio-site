@@ -164,14 +164,10 @@ header {
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
-    
-    height: 1000px;
 }
 
 section {
     padding: 0 15px; /* 左右の余白 */
-
-    background-color: rgb(172, 114, 114);
 }
 
 .profile h2 {
@@ -240,5 +236,53 @@ th, td {
 
 .history-wrapper img {
     width: 120px;
+    border: 1px solid #000;
     border-radius: 50%; /* 画像を正円にする */
+}
+
+.history-left {
+    display: flex;
+    justify-content: flex-start; /* 左寄せ */
+    margin: 0 130px 25px 50px;
+}
+
+.history-left img {
+    margin-right: 10px;
+}
+
+.history-right {
+    display: flex;
+    justify-content: flex-end; /* 右寄せ */
+    flex-direction: row-reverse; /* 並び順を逆にする */
+    margin: 0 50px 25px 130px;
+}
+
+.img-wrapper {
+    margin-left: 10px;
+}
+
+.age {
+    text-align: center;
+}
+
+.history-text {
+    width: 100%; /* 中身の要素が空で absolute するとずれるため */
+    position: relative;
+}
+
+.text-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.text-inner p {
+    line-height: 2.2rem;
+}
+
+.history-title {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
 }

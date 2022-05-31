@@ -58,6 +58,7 @@ q:before, q:after {
 }
 
 a {
+    text-decoration: none; /* 追加 */
     margin:0;
     padding:0;
     vertical-align:baseline;
@@ -168,28 +169,76 @@ header {
 }
 
 section {
-    padding: 0 10px; /* 左右の余白 */
+    padding: 0 15px; /* 左右の余白 */
 
     background-color: rgb(172, 114, 114);
 }
 
 .profile h2 {
-    padding: 30px 0;
+    text-align: center;
+    padding: 50px 0;
 }
 
 .profile-box {
     display: flex;
+    margin-bottom: 25px;
 }
 
 .profile-left {
     flex: 1;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .profile-left img {
     width: 100%; /* flex:1 をした親要素の幅に合わせる */
+    vertical-align: top; /* 画像の下の隙間を無くす */
 }
 
 .profile-right {
     flex: 1;
+    position: relative; /* .mail-btn の基準位置 */
+}
+
+.name {
+    font-size: 2rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 25px 0;
+    margin-bottom: 25px;
+}
+
+.profile-table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+th, td {
+    border: 1px solid #000; /* セルの線を重ねる border-collapse はcssリセットで設定済み */
+    padding: 10px;
+}
+
+.profile-text {
+    line-height: 2.2rem;
+}
+
+.mail-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 0.2rem;
+    background-color: #ff9;
+    position: absolute; /* .profile-right の最下部に固定 */
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+}
+
+.fa-envelope {
+    margin-right: 4px;
+}
+
+.history-wrapper img {
+    width: 120px;
+    border-radius: 50%; /* 画像を正円にする */
 }

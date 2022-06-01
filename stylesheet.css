@@ -170,12 +170,12 @@ section {
     padding: 0 15px; /* 左右の余白 */
 }
 
-.profile h2 {
+h2 { /* 全てのセクションタイトル */
     text-align: center;
     padding: 50px 0;
 }
 
-.profile-box {
+.profile-wrapper {
     display: flex;
     margin-bottom: 25px;
 }
@@ -286,3 +286,59 @@ th, td {
     border-bottom: 1px solid #000;
     margin-bottom: 5px;
 }
+
+
+/* ここから .skill */
+.skill-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-box {
+    width: 300px;
+    
+    border: 1px solid #555555;
+    margin-bottom: 25px;
+}
+
+.skill-img {
+    height: 150px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.skill-img img {
+    height: 100%;
+}
+
+.star-rate {
+    color: #8d8d8d;
+    display: inline-block; /* インラインだと上下に余白ができて（line-height無効）positionがずれるため */
+    position: relative;
+    z-index: 0;
+    white-space: nowrap;
+    margin-left: 110px; /* text-align:center だと色付き星まで真ん中よりになるためマージンレフトで計算して中央に配置 */
+    margin-bottom: 15px;
+}
+
+.star-rate::before, .star-rate::after {
+    content: '★★★★★';
+}
+
+.star-rate::after {
+    color: rgb(255, 217, 64); /* アフターには色を付ける */
+    position: absolute;
+    z-index: 1; /* ビフォアに重ねる */
+    top: 0;
+    left: 0;
+    overflow: hidden; /* アフター指定幅からはみ出した部分を隠し星を見える量を調整している */
+    white-space: nowrap;
+}
+
+/* data-rate 数値（星数）ごとのアフター幅設定 */
+.star-rate[data-rate="1"]::after {width: 20%;}
+.star-rate[data-rate="2"]::after {width: 40%;}
+.star-rate[data-rate="3"]::after {width: 60%;}
+.star-rate[data-rate="4"]::after {width: 80%;}
+.star-rate[data-rate="5"]::after {width: 100%;}

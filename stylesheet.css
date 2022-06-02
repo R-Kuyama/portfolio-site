@@ -144,9 +144,10 @@ header {
 /* ここから.top */
 .top {
     width: 100%;
-    height: 700px;
+    height: 100vh;
     background-color: rgb(240, 240, 240);
     position: relative; /* 下の h1 の基準にする */
+    margin-bottom: 25px;
 }
 
 .top h1 {
@@ -166,18 +167,21 @@ header {
     margin: 0 auto;
 }
 
-section {
+section { /* 全てのsection共通設定 */
+    height: 813px;
     padding: 0 15px; /* 左右の余白 */
 }
 
 h2 { /* 全てのセクションタイトル */
+    color: #fff;
     text-align: center;
+    background-color: rgb(141, 141, 141);
     padding: 50px 0;
 }
 
 .profile-wrapper {
     display: flex;
-    margin-bottom: 25px;
+    margin-top: 117px; /* 縦位置を中央にするため */
 }
 
 .profile-left {
@@ -218,26 +222,29 @@ th, td {
     line-height: 2.2rem;
 }
 
-.mail-btn {
-    width: 100%;
-    display: block;
+.mail-btn { /* 共通設定 */
+    width: 455px;
+    display: inline-block;
     text-align: center;
     border-radius: 0.2rem;
     background-color: #ff9;
+    padding: 20px 0;
+}
+
+.mail-top {
     position: absolute; /* .profile-right の最下部に固定 */
     bottom: 0;
     left: 0;
-    padding: 20px 0;
 }
 
 .fa-envelope {
     margin-right: 4px;
 }
 
-.history-wrapper img {
-    width: 120px;
-    border: 1px solid #000;
-    border-radius: 50%; /* 画像を正円にする */
+
+/* ここから .history */
+.history-inner {
+    margin: 25px 0;
 }
 
 .history-left {
@@ -259,6 +266,12 @@ th, td {
 
 .img-wrapper {
     margin-left: 10px;
+}
+
+.img-wrapper img {
+    width: 120px;
+    border: 1px solid #000;
+    border-radius: 50%; /* 画像を正円にする */
 }
 
 .age {
@@ -293,13 +306,13 @@ th, td {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 124px; /* 縦位置を中心にする */
 }
 
 .skill-box {
     width: 300px;
-    
     border: 1px solid #555555;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .skill-img {
@@ -342,3 +355,80 @@ th, td {
 .star-rate[data-rate="3"]::after {width: 60%;}
 .star-rate[data-rate="4"]::after {width: 80%;}
 .star-rate[data-rate="5"]::after {width: 100%;}
+
+
+/* ここから .work */
+.tabs {
+    display: flex;
+    margin-top: 70px; /* 縦位置を中心にする */
+}
+
+.tab {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    padding: 15px 20px;
+}
+
+.tab-contents {
+    border: 1px solid #000;
+}
+
+.content {
+    display: flex;
+}
+
+.content-left, .content-right { /* 左右共通設定 */
+    height: 500px; /* 仮設定 高さを指定しないと position がずれる */
+    text-align: center;
+    flex: 1;
+    position: relative;
+    margin: 0 15px;
+}
+
+.content-box { /* 全コンテンツ共通設定 */
+    width: 100%; /* 親の flex:1 の中で100% */
+    line-height: 2.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.content-box span { /* 全コンテンツ共通設定 */
+    border-bottom: 1px solid #555555;
+    display: inline-block; /* 上下の余白を調整するため */
+}
+
+.content-box p { /* 全コンテンツ共通設定 */
+    margin-bottom: 7px;
+}
+
+.content-left img {
+    width: 100%;
+}
+
+
+/* ここから .contact */
+.contact-box {
+    height: 689px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner p {
+    line-height: 2.2rem;
+    margin-bottom: 25px;
+}
+
+
+/* ここから footer */
+footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px; /* 縦位置を中心にする */
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+}

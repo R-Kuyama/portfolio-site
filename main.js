@@ -14,4 +14,11 @@ $(function() {
         $(this).addClass('active'); // クリックされた.tabにactiveクラスを付ける
         $('.content').eq(index).addClass('active'); // クリックされた.tabに対応する.contentにactiveクラスを付ける
     });
+
+    $('.modal-open').click(function() {
+        const target = $(this).data('id');
+        console.log(target);
+        $('#overlay, .modal').fadeIn();
+    });
+
 });

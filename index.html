@@ -8,6 +8,12 @@
     <title>RyujiKuyama Portfolio</title>
 </head>
 <body>
+    <!--モーダル設定-->
+    <div id="overlay" class="overlay"></div>
+    <div class="modal" data-id="tedori-img">
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./img/tedori-keisan.jpg" alt="手取り計算シミュレーション">
+    </div>
     <header>
         <nav class="navbar">
             <ul class="gnav">
@@ -154,9 +160,9 @@
                 <div class="content active">
                     <div class="content-left">
                         <div class="content-box">
-                            <img src="./img/tedori-keisan.jpg" alt="手取り計算シミュレーション" class="content-image">
+                            <img src="./img/tedori-keisan.jpg" alt="手取り計算シミュレーション" class="content-image modal-open" data-id="tedori-img">
                             <p>Webアプリ 手取り計算シミュレーション</p>
-                            <a href="https://www.tedori-keisan.com" target="_blank" rel="noopener noreferrer">https://www.tedori-keisan.com</a>
+                            <a href="https://www.tedori-keisan.com/" target="_blank" rel="noopener noreferrer">https://www.tedori-keisan.com/</a>
                         </div>
                     </div>
                     <div class="content-right">

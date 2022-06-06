@@ -14,6 +14,23 @@
         <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
         <img src="./img/tedori-keisan.jpg" alt="手取り計算シミュレーション">
     </div>
+    <div class="modal" data-id="portfolio">
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./img/portfolio.jpg" alt="ポートフォリオサイト">
+    </div>
+    <div class="modal" data-id="image-box-1">
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./img/demosite1.jpg" alt="模写サイト1">
+    </div>
+    <div class="modal" data-id="image-box-2">
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./img/demosite2.jpg" alt="模写サイト2">
+    </div>
+    <div class="modal" data-id="image-box-3">
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <img src="./img/demosite3.jpg" alt="模写サイト3">
+    </div>
+    <!--モーダル設定ここまで-->
     <header>
         <nav class="navbar">
             <ul class="gnav">
@@ -36,7 +53,7 @@
             <h2>プロフィール</h2>
             <div class="profile-wrapper">
                 <div class="profile-left">
-                    <img src="./img/shopping.jpg" alt="ショッピング">
+                    <img src="./img/shopping.jpg" alt="ショッピング" class="scroll-anime fade-center">
                 </div>
                 <div class="profile-right">
                     <p class="name">久山 龍二（クヤマ リュウジ）</p>
@@ -60,7 +77,7 @@
         <section class="history" id="section2">
             <h2>経歴</h2>
             <div class="history-inner">
-                <div class="history-left">
+                <div class="history-left scroll-anime fade-left">
                     <div class="img-wrapper">
                         <img src="./img/golf.jpg" alt="ゴルフ">
                         <p class="age">16歳</p>
@@ -73,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="history-right">
+                <div class="history-right scroll-anime fade-right">
                     <div class="img-wrapper">
                         <img src="./img/netshop.jpg" alt="ネットショップ">
                         <p class="age">20~21歳</p>
@@ -86,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="history-left">
+                <div class="history-left scroll-anime fade-left">
                     <div class="img-wrapper">
                         <img src="./img/factory.jpg" alt="工場">
                         <p class="age">23歳</p>
@@ -99,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="history-right">
+                <div class="history-right scroll-anime fade-right">
                     <div class="img-wrapper">
                         <img src="./img/webproduction.jpg" alt="Web制作">
                         <p class="age">24歳</p>
@@ -117,31 +134,31 @@
         <section class="skill" id="section3">
             <h2>スキル</h2>
             <div class="skill-wrapper">
-                <div class="html5 skill-box">
+                <div class="html5 skill-box scroll-anime fade-bottom">
                     <div class="skill-img">
                         <img src="./img/html5.png" alt="HTML5">
                     </div>
                     <span class="star-rate" data-rate="3"></span>
                 </div>
-                <div class="css3 skill-box">
+                <div class="css3 skill-box scroll-anime fade-bottom">
                     <div class="skill-img">
                         <img src="./img/css3.png" alt="CSS3">
                     </div>
                     <span class="star-rate" data-rate="3"></span>
                 </div>
-                <div class="javascript skill-box">
+                <div class="javascript skill-box scroll-anime fade-bottom">
                     <div class="skill-img">
                         <img src="./img/javascript.png" alt="JavaScript">
                     </div>
                     <span class="star-rate" data-rate="2"></span>
                 </div>
-                <div class="jquery skill-box">
+                <div class="jquery skill-box scroll-anime fade-bottom">
                     <div class="skill-img">
                         <img src="./img/jquery.png" alt="jQuery">
                     </div>
                     <span class="star-rate" data-rate="2"></span>
                 </div>
-                <div class="git skill-box">
+                <div class="git skill-box scroll-anime fade-bottom">
                     <div class="skill-img">
                         <img src="./img/git.png" alt="git">
                     </div>
@@ -188,7 +205,7 @@
                 <div class="content">
                     <div class="content-left">
                         <div class="content-box">
-                            <img src="./img/portfolio.jpg" alt="ポートフォリオサイト" class="content-image">
+                            <img src="./img/portfolio.jpg" alt="ポートフォリオサイト" class="content-image modal-open" data-id="portfolio">
                             <p>ポートフォリオサイト</p>
                             <a href="#">https://www.tedori-keisan.com</a>
                         </div>
@@ -215,10 +232,10 @@
                 <div class="content">
                     <div class="content-left">
                         <div class="content-box">
-                            <div class="content-image image-box">
-                                <img src="./img/demosite1.jpg" alt="模写サイト1">
-                                <img src="./img/demosite2.jpg" alt="模写サイト2">
-                                <img src="./img/demosite3.jpg" alt="模写サイト3">
+                            <div class="content-image other-images">
+                                <img src="./img/demosite1.jpg" alt="模写サイト1" class=" modal-open" data-id="image-box-1">
+                                <img src="./img/demosite2.jpg" alt="模写サイト2" class=" modal-open" data-id="image-box-2">
+                                <img src="./img/demosite3.jpg" alt="模写サイト3" class=" modal-open" data-id="image-box-3">
                             </div>
                             <p><i class="fa-brands fa-github"></i>GitHub</p>
                             <a href="https://github.com/R-Kuyama" target="_blank" rel="noopener noreferrer">https://github.com/R-Kuyama</a>

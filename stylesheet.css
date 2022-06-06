@@ -146,12 +146,64 @@ input, select {
     cursor: pointer;
 }
 
+.modal-open { /* モーダル対応している画像の設定 */
+    cursor: pointer;
+}
+
 .fa-xmark {
     font-size: 3.4rem;
 }
 
 .modal img { /* 幅だけ設定して高さは可変 */
     width: 100%;
+}
+
+.no-scroll { /* モーダル表示の際jsで付け外しする */
+    overflow: hidden; /* 画面外を隠しスクロールさせない */
+}
+
+
+/* ここからスクロールアニメーション設定 */
+.fade-center { /* 変化前 */
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.fade-center.anime-on { /* 変化後 */
+    opacity: 1;
+}
+
+.fade-bottom { /* 変化前 */
+    transform: translateY(100px); /* 下から出現 */
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.fade-bottom.anime-on { /* 変化後 */
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-left { /* 変化前 */
+    transform: translateX(-100px); /* 左から出現 */
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.fade-left.anime-on { /* 変化後 */
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fade-right { /* 変化前 */
+    transform: translateX(100px); /* 右から出現 */
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.fade-right.anime-on { /* 変化後 */
+    transform: translateX(0);
+    opacity: 1;
 }
 
 
@@ -507,7 +559,7 @@ th, td {
     margin-bottom: 15px;
 }
 
-.image-box { /* その他タブの設定 */
+.other-images { /* その他タブ専用設定 */
     max-height: 350px; /* overflow: hidden の適用範囲 */
     display: flex;
     justify-content: space-between; /* 横位置を均等にする */
@@ -515,7 +567,7 @@ th, td {
     overflow: hidden; /* はみ出た部分を非表示 */
 }
 
-.image-box img {
+.other-images img {
     width: 30%; /* 1/3の余白ありで30% */
 }
 

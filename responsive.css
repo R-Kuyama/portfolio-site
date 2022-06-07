@@ -1,0 +1,50 @@
+/* ブレイクポイント600~1024px タブレット向けメディアクエリ */
+@media (max-width: 1024px) {
+    header { /* 影響あるものだけ無効 */
+        width: auto;
+        height: auto;
+    }
+
+    .navbar { /* max-width設定用だったので全て無効 */
+        width: auto;
+        max-width: none;
+        margin: 0;
+    }
+
+    .nav-btn {
+        /* ボタンの位置 */
+        position: fixed;
+        top: 32px;
+        right: 16px;
+        /* ボタンの大きさ */
+        width: 48px;
+        height: 48px;
+        /* header 最前面に */
+        z-index: 101;
+        background-color: red; /* わかりやすいように */
+    }
+
+    /* 真ん中のバーガー線 */
+    .btn-line {
+        display: block; /* 大きさを変えるため */
+        position: relative; /* バーガー線の位置基準として設定 */
+        width: 100%; /* 線の長さと高さ */
+        height: 4px;
+        background-color: #d6d5d5;  /* バーガー線の色 */
+        transition: .2s;
+    }
+
+    .gnav {
+        position: fixed; /* 通常は隠す */
+        right: -100%;
+        width: 100vw;
+        height: 50vh;
+        flex-direction: column;
+        transition: 0.3s;
+    }
+
+    section { /* 全てのsection共通設定 */
+        height: auto;
+        padding: 0 10px; /* 左右の余白 */
+    }
+}

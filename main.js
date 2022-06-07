@@ -22,7 +22,7 @@ $(function() {
         $(`#overlay, .modal[data-id = ${target}]`).fadeIn(); // #overlay と取得したdata-idと同じ .modal を表示（テンプレートリテラル使用）
     });
     // クローズボタンかオーバーレイクリックでモーダル閉じる
-    $('.close-btn, #overlay').click(function() {
+    $('#overlay').click(function() {
         $('body').removeClass('no-scroll'); //背景固定クラス削除
         $('#overlay, .modal').fadeOut(); // オーバーレイとモーダル閉じる
     });

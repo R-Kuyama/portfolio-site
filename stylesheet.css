@@ -225,6 +225,16 @@ header {
     z-index: 100; /* レイヤー順 */
 }
 
+.navbar {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.nav-btn { /* メディアクエリ用タグ ナビバーがずれるためPC閲覧時は表示しない */
+    display: none;
+}
+
 .gnav {
     display: flex;
 }
@@ -243,12 +253,6 @@ header {
 .gnav a:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-}
-
-.navbar {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
 }
 
 

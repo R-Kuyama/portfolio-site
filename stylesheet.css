@@ -125,7 +125,7 @@ button {
 }
 
 
-/* ここからモーダル設定 */
+/***** ここからモーダル設定 *****/
 .overlay { /* グレーの背景 */
     display: none;  /*デフォルトは非表示 */
     width: 100%;
@@ -170,7 +170,7 @@ button {
 }
 
 
-/* ここからスクロールアニメーション設定 */
+/***** ここからスクロールアニメーション設定 *****/
 .fade-center { /* 変化前 */
     transition: all 0.5s;
     opacity: 0;
@@ -214,12 +214,13 @@ button {
 }
 
 
-/* ここから header */
+/***** ここから header *****/
 header {
     width: 100%;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
-    position: fixed; /* ヘッダー固定 */
+    /* ヘッダー固定 */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100; /* レイヤー順 */
@@ -227,6 +228,7 @@ header {
 
 .navbar {
     width: 100%;
+    height: 100%;
     max-width: 980px;
     margin: 0 auto;
 }
@@ -236,18 +238,21 @@ header {
 }
 
 .gnav {
+    height: 100%; /* 親要素の高さを保つ */
     display: flex;
 }
 
 .gnav li {
-    text-align: center;
-    flex: 1;
+    flex: 1; /* 均等に並べる */
 }
 
 .gnav a {
+    height: 100%; /* 親要素の高さを保つ */
     color: #4d4d4d;
-    display: block; /* 全幅クリック可能に */
-    padding: 17px 0;
+    /* センター寄せ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gnav a:hover {
@@ -256,7 +261,7 @@ header {
 }
 
 
-/* ここから.top */
+/***** ここから.top *****/
 .top {
     width: 100%;
     height: 100vh;
@@ -274,8 +279,8 @@ header {
     -webkit-transform: translate(-50%, -50%);
 }
 
-/* ここから .main-wrapper */
-/* ここから .profile */
+/***** ここから .main-wrapper *****/
+/***** ここから .profile *****/
 .main-wrapper {
     width: 100%;
     max-width: 980px;
@@ -333,7 +338,8 @@ th {
     background-color: rgb(240, 240, 240);
 }
 
-th, td {
+th,
+td {
     border: 1px solid #000; /* セルの線を重ねる border-collapse はcssリセットで設定済み */
     padding: 10px;
 }
@@ -366,34 +372,37 @@ th, td {
     left: 0;
 }
 
-.fa-envelope, .fa-github { /* FontAwesomeアイコン */
+.fa-envelope,
+.fa-github { /* FontAwesomeアイコン */
     margin-right: 4px;
 }
 
 
-/* ここから .history */
+/***** ここから .history *****/
 .history-inner {
     margin: 25px 0;
 }
 
-.history-left {
+.history-left,
+.history-right {
     display: flex;
-    justify-content: flex-start; /* 左寄せ */
+    align-items: center; /* 縦位置を中央にする */
+}
+
+.history-left {
     margin: 0 130px 25px 50px;
 }
 
-.history-left img {
+.history-left .img-wrapper {
     margin-right: 10px;
 }
 
 .history-right {
-    display: flex;
-    justify-content: flex-end; /* 右寄せ */
-    flex-direction: row-reverse; /* 並び順を逆にする */
+    flex-direction: row-reverse; /* rightは並び順を逆 */
     margin: 0 50px 25px 130px;
 }
 
-.img-wrapper {
+.history-right .img-wrapper {
     margin-left: 10px;
 }
 
@@ -408,15 +417,7 @@ th, td {
 }
 
 .history-text {
-    width: 100%; /* 中身の要素が空で absolute するとずれるため */
-    position: relative;
-}
-
-.text-inner {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    width: 100%; /* img120px固定で余り全幅使う */
 }
 
 .text-inner p {
@@ -431,7 +432,7 @@ th, td {
 }
 
 
-/* ここから .skill */
+/***** ここから .skill *****/
 .skill-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -465,7 +466,8 @@ th, td {
     margin-bottom: 15px;
 }
 
-.star-rate::before, .star-rate::after {
+.star-rate::before,
+.star-rate::after {
     content: '★★★★★';
 }
 
@@ -487,7 +489,7 @@ th, td {
 .star-rate[data-rate="5"]::after {width: 100%;}
 
 
-/* ここから .work */
+/***** ここから .work *****/
 .tabs {
     display: flex;
     margin-top: 70px; /* 縦位置を中心にする */
@@ -525,7 +527,8 @@ th, td {
     display: flex;
 }
 
-.content-left, .content-right { /* 左右共通設定 */
+.content-left,
+.content-right { /* 左右共通設定 */
     height: 500px; /* 仮設定 高さを指定しないと position がずれる */
     text-align: center;
     flex: 1;
@@ -583,7 +586,7 @@ th, td {
 }
 
 
-/* ここから .contact */
+/***** ここから .contact *****/
 .contact-box {
     height: 689px;
     text-align: center;
@@ -598,7 +601,7 @@ th, td {
 }
 
 
-/* ここから footer */
+/***** ここから footer *****/
 footer {
     width: 100%;
     height: 50px;

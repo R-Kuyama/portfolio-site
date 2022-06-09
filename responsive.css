@@ -1,5 +1,6 @@
 /* ブレイクポイント600~1024px タブレット向けメディアクエリ */
 @media (max-width: 1024px) {
+    /***** ここから header *****/
     header { /* 影響あるものだけ無効 */
         width: auto;
         height: auto;
@@ -12,16 +13,16 @@
     }
 
     .nav-btn {
+        display: block;
         /* ボタンの位置 */
         position: fixed;
-        top: 32px;
+        top: 20px;
         right: 16px;
         /* ボタンの大きさ */
         width: 48px;
         height: 48px;
         /* header 最前面に */
         z-index: 101;
-        background-color: red; /* わかりやすいように */
     }
 
     /* 真ん中のバーガー線 */
@@ -30,9 +31,28 @@
         position: relative; /* バーガー線の位置基準として設定 */
         width: 100%; /* 線の長さと高さ */
         height: 4px;
-        background-color: #d6d5d5;  /* バーガー線の色 */
+        background-color: rgb(0, 0, 0);  /* バーガー線の色 */
         transition: .2s;
     }
+
+    .btn-line::before,
+    .btn-line::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        transition: 0.5s;
+    }
+
+    .btn-line::before {
+        /* 上の線の位置 */
+        transform: translateY(-16px);
+      }
+      .btn-line::after {
+        /* 下の線の位置 */
+        transform: translateY(16px);
+      }
 
     .gnav {
         position: fixed; /* 通常は隠す */
@@ -40,11 +60,97 @@
         width: 100vw;
         height: 50vh;
         flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.4);
         transition: 0.3s;
     }
 
-    section { /* 全てのsection共通設定 */
-        height: auto;
-        padding: 0 10px; /* 左右の余白 */
+    .gnav a {
+        color: rgb(255, 255, 255);
+    }
+
+    /* オープン時 */
+    .gnav.open {
+        right: 0; /* 横位置を戻して表示する */
+    }
+    .btn-line.open { /* 上下の線を使い×印を作る */
+        background-color: transparent; /* 真ん中の線を透明に */
+    }
+    .btn-line.open::before,
+    .btn-line.open::after {
+        background-color: rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+    .btn-line.open::before {
+        transform: rotate(45deg); /* 上の線を傾ける */
+    }
+    .btn-line.open::after {
+        transform: rotate(-45deg); /* 下の線を傾ける */
+    }
+
+
+    /***** ここから top *****/
+    .top {
+        margin-bottom: 80px;
+    }
+
+
+    /***** ここから .main-wrapper *****/
+    /* 全てのsection共通設定 */
+    section {
+        height: auto; /* 高さは可変 */
+        padding: 0 10px; /* 左右の余白狭める */
+    }
+
+    /***** ここから .profile *****/
+    .profile-wrapper {
+        margin: 80px 0;
+    }
+
+    .profile-left {
+        flex: 2;
+        margin-right: 20px;
+    }
+
+    .profile-right {
+        flex: 3;
+    }
+
+    .profile-text {
+        margin-bottom: 25px;
+    }
+
+    .mail-top {
+        max-width: none; /* topボタンだけ最大幅解除 */
+        position: static; /* 最下部固定をやめる */
+    }
+
+
+    /***** ここから .history *****/
+    .history-inner {
+        margin: 80px 0;
+    }
+
+    .history-left, .history-right {
+        margin: 0 0 25px 0;
+    }
+
+
+    /***** ここから .skill *****/
+    .skill-wrapper {
+        margin: 80px 0;
+    }
+
+    .skill-box {
+        margin-bottom: 25px;
+    }
+
+
+    /***** ここから .work *****/
+    .tabs {
+        margin-top: 80px;
+    }
+
+    .tab-contents {
+        margin-bottom: 80px;
     }
 }

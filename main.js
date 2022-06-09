@@ -7,6 +7,11 @@ $(function() {
         return false; // url変わるのを防ぐため
     });
 
+    // ハンバーガークリックでガイド表示・非表示
+    $('.js-btn').on('click', function() {
+        $('.gnav, .btn-line').toggleClass('open');
+    })
+
     // スキルセクションのタブ機能
     $('.tab').click(function() {
         const index = $('.tab').index($(this)); // クリックされた.tabのインデックス番号を取得

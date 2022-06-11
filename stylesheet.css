@@ -348,7 +348,7 @@ td {
     line-height: 2.2rem;
 }
 
-.mail-btn { /* ボタン共通設定 */
+.mail-btn { /* メールボタン共通設定 */
     color:#000;
     width: 100%;
     max-width: 455px; /* 最下部のボタンを上部ボタン幅に合わすため */

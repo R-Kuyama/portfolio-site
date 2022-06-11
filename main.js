@@ -38,7 +38,7 @@ $(function() {
             const scroll = $(window).scrollTop(); // スクロール量を取得
             const position = $(this).offset().top; // 要素の縦位置を取得
             const windowHeight = $(window).height(); // 画面の高さを取得
-            const diff = $(window).height() / 3; // 画面の1/3の数値を取得（アニメーション発動の位置）
+            const diff = $(window).height() / 4; // 画面の1/4の数値を取得（アニメーション発動の位置）
             if (scroll > position - windowHeight + diff) { // 画面1/3に要素が入ったらクラス付与してアニメーション実行
                 $(this).addClass('anime-on');
             }

@@ -119,11 +119,8 @@
         margin-bottom: 25px;
     }
 
-    .mail-btn {
-        max-width: none; /* topボタンだけ最大幅解除 */
-    }
-
     .mail-top {
+        max-width: none; /* topボタンだけ最大幅解除 */
         position: static; /* 最下部固定をやめる */
     }
 

@@ -124,6 +124,11 @@
         position: static; /* 最下部固定をやめる */
     }
 
+    .mail-btn:hover { /* アニメーション解除設定 */
+        box-shadow: none;
+        transform: none;
+    }
+
 
     /***** ここから .history *****/
     .history {
@@ -158,6 +163,19 @@
 
     .tab-contents {
         margin-bottom: 80px;
+    }
+
+
+
+    /***** ここから banner-sample.html *****/
+    .banner-image:hover { /* アニメーション解除設定 */
+        transform: none;
+        transition: none;
+    }
+
+    .back-btn:hover { /* アニメーション解除設定 */
+        box-shadow: none;
+        transform: none;
     }
 }
 
@@ -265,5 +283,29 @@
     .contact-box {
         height: auto;
         margin: 30px 0 50px;
+    }
+
+
+
+    /***** ここから banner-sample.html *****/
+    .banner-sample {
+        flex-direction: column; /* 縦並びにする */
+    }
+
+    .banner-box {
+        margin-bottom: 10rem;
+    }
+
+    .banner-sample-left,
+    .banner-sample-right {
+    width: 100%; /* スマホではカラム表示なので100% */
+    }
+
+    .banner-sample-right {
+        margin-top: 3rem;
+    }
+
+    .back-btn-box {
+        margin: 10rem 0.5rem 5rem;
     }
 }

@@ -616,9 +616,9 @@ footer {
 /***** ここから banner-sample-header *****/
 .banner-sample-header {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     background-color: rgb(240, 240, 240);
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
 }
 
 .banner-sample-header h3 {
@@ -634,24 +634,79 @@ footer {
 .banner-number {
     font-size: 2.6rem;
     border-bottom: 0.5rem solid rgb(141, 141, 141);
-    margin-bottom: 5rem;
+    margin: 0 0.5rem 4rem;
 }
 
 .banner-sample {
     display: flex;
-    margin: 0 15px;
+    align-items: flex-start; /* left画像の高さをrightに影響されずぴったりに保ちマウスオーバーアニメを付けるため */
+    justify-content: space-between;
+    margin: 0 1.5rem;
+}
+
+.banner-box {
+    margin-bottom: 15rem;
+}
+.banner-box:last-child {
+    margin-bottom: 0;
 }
 
 .banner-sample-left,
 .banner-sample-right {
-    width: 50%;
+    width: 48%; /* 間に余白を入れるため */
+}
+
+.banner-sample-left {
+    overflow: hidden; /* 画像マウスオーバー拡大時に隠す */
 }
 
 .banner-image {
     width: 100%;
     vertical-align: top; /* 画像の下の余白無くす */
+    transition: 0.2s; /* マウスオーバー解除時の時間 */
+}
+.banner-image:hover {
+    transform: scale(1.2); /* 1.2倍に拡大 */
+    transition: 0.3s; /* マウスオーバー発動時の時間 */
 }
 
 .banner-textarea {
-    margin: 0 20px;
+    line-height: 2.2rem;
+}
+
+.banner-textarea span { /* 共通設定 */
+    color: rgb(0, 0, 0);
+    border-bottom: 0.1rem solid rgb(0, 0, 0);
+    display: inline-block; /* 上下の余白を調整するため */
+    margin-bottom: 0.8rem;
+}
+
+.banner-textarea p {
+    margin-bottom: 3rem;
+}
+.banner-textarea p:last-child {
+    margin-bottom: 0;
+}
+
+.back-btn-box {
+    text-align: center;
+    margin: 15rem 0 5rem;
+}
+
+.back-btn { /* 戻るボタン設定 */
+    color:rgb(255, 255, 255);
+    width: 100%;
+    max-width: 45.5rem; /* 最下部のボタンを上部ボタン幅に合わすため */
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    background-color: rgb(141, 141, 141);
+    padding: 2rem 0;
+    transition: 0.2s; /* アニメーション速度 */
+}
+
+.back-btn:hover { /* ボタンホバー時共通設定 */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.2rem); /* 少し浮き上がらせる */
 }
